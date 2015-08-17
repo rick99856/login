@@ -4,5 +4,5 @@
 
 unset($_SESSION['username']);
 echo 'logouting ......';
-echo '<meta http-equiv=REFRESH CONTENT="1;url=index.php">';
+echo '<meta http-equiv=REFRESH CONTENT="1;url=../index.php">';
 ?>

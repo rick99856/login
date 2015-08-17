@@ -1,14 +1,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<link rel="stylesheet" href="dist/css/bootstrap.min.css">
-<script src="dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../dist/css/bootstrap.min.css">
+<script src="../dist/js/bootstrap.min.js"></script>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <html>
-	<body background="colorful-triangles-background_yB0qTG6.jpg" style="background-repeat: no-repeat;background-size:cover;">
+	<body background="../resource/colorful-triangles-background_yB0qTG6.jpg" style="background-repeat: no-repeat;background-size:cover;">
 					
 	<div class="row">
 
 	<div class="col-md-4 col-md-offset-4" >
- 	<form name="form" method="post" action="register_finish.php">
+ 	<form name="form" method="post" action="../model/register_finish.php">
 					
 
 		   			<font color="#BBFFEE" size="4"  face="monospace">帳號：</font><input type="text" name="id" class="form-control" placeholder="ID"/> <br>

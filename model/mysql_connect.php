@@ -1,10 +1,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <?php
+
 	$db_server="localhost";
 	$db_name="s13113241";
 	$db_user="s13113241";
 	$db_passwd="hs9m322x";
-
+	
 	if(!@mysql_connect($db_server, $db_user, $db_passwd))
         die("無法對資料庫連線");
 
