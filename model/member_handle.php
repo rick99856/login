@@ -1,5 +1,19 @@
 <?php 
 class Member_handle{
+  function check(){
+    foreach (func_get_args() as $n) {
+       if(isset($n)){
+         continue;
+       }
+        else{
+          return false;
+        }
+
+        return ture;
+       
+    }
+  }
+
 	function register($id , $pw , $telephone,$address,$other){
 		$sql_check = "SELECT * FROM `login` WHERE username='$id'";
     $result = mysql_query($sql_check);
@@ -8,16 +22,9 @@ class Member_handle{
 	          echo '<meta http-equiv=REFRESH CONTENT="2;url=../index.php">';
 	  }
     else {
-     $sql = "INSERT INTO `login`( `username`, `passwd`, `tel`, `adds`, `other`) VALUES ('$id',  '".md5($pw)."', '$telephone', '$address', '$other')";
-
-        if(mysql_query($sql)) {
-	          echo '新增成功!';
-	          echo '<meta http-equiv=REFRESH CONTENT="2;url=../index.php">';
-        }
-        else {
-              echo '新增失敗!';
-               echo '<meta http-equiv=REFRESH CONTENT="2;url=../index.php">';
-        }    
+      $sql = "INSERT INTO `login`( `username`, `passwd`, `tel`, `adds`, `other`) VALUES ('$id',  '".md5($pw)."', '$telephone', '$address', '$other')";
+      return mysql_query($sql);
+        
     }
 	}
 
