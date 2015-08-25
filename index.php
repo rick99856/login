@@ -18,15 +18,17 @@
 		</div>
 
 	<input type="submit" value="登入" class="btn btn-primary btn-md  col-md-offset-4" name="buttons" style="
-    	width: 200;">&nbsp;&nbsp;
+    	width: 200;">
     	
 
-	<!-- <a href="register.php">申請帳號</a> -->
 
 
 		
-		<button type="button" class="btn btn-info btn-sm col-md-offset-4 name="buttons" style="
-    	width: 200;" onclick='location.href="model/funct1.php?a=1"'>新增</button>"
+		<button type="button" class="btn btn-info btn-sm col-md-offset-4" name="buttons" style="
+    	width: 200;" onclick='location.href="model/funct1.php?a=1"'>註冊 </button>
+
+    	<button type="button" class="btn btn-danger btn-sm col-md-offset-4" name="buttons" style="
+    	width: 200;" onclick='location.href="model/funct1.php?a=4"'>忘記密碼 </button>
 		
 	
 

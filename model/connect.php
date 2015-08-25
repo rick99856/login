@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <?php
 	include("mysql_connect.php");
-	// echo $_POST['id'].' '.$_POST['pwd'];
+	
 	
 
 		if(isset($_POST['buttons'])){

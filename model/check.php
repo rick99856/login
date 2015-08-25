@@ -6,7 +6,7 @@ session_start();
 		if(isset($_POST['buttons'])){
 			if ($mem->check($_POST['id'],$_POST['pwd'])==false){
 			// if( empty($_POST['id']) ||  empty($_POST['pwd'])){
-				echo '<script>alert("不得為空值") </script>';
+				echo '<script>alert("帳密不得為空值") </script>';
 				echo '<meta http-equiv="refresh" CONTENT="1; url=../index.php">';
 			} 
 			else {
@@ -15,16 +15,13 @@ session_start();
 				$sql = "select * from login where username = '$id'";
 				$result = mysql_query($sql);
 				$row = @mysql_fetch_row($result);
-				// print_r($row);
-				// echo $id.''.$pwd;
-				// echo $row[2]."<br><br>";
-				// echo md5($pwd);
-				if($id != null && $pwd !=null && $row[1]==$id && $row[2]==md5($pwd)){
-				
-				
 
-				
+				if($row[1]==$id && $row[2]==md5($pwd)){
+
 					$_SESSION['username'] = $id;
+					$_SESSION['tel'] = $row[3];
+					$_SESSION['addr'] = $row[4];
+					$_SESSION['other'] = $row[5];
 
 					echo "登入成功";
 					echo '<meta http-equiv="refresh" CONTENT="1; url=../view/member.php">';

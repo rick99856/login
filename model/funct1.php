@@ -13,6 +13,8 @@ if(isset($_GET['a'])){
 		case '3':
 			require_once('../view/delete.php');
 			break;	
+		case '4':
+			require_once('../view/forgetpwd.php');
 		default:
 			break;
 	}

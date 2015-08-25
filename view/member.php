@@ -15,11 +15,6 @@ include("../model/mysql_connect.php");
 
     
     if($_SESSION['username'] != null){
-        // header("Location:information.html");
-    // echo $_SESSION['username'];
-        // echo '<a href="register.php">新增</a>    ';
-        // echo '<a href="update.php">修改</a>    ';
-        // echo '<a href="delete.php">刪除</a>  <br><br>';
 
         $sql = "SELECT * FROM login";
         $result = mysql_query($sql);

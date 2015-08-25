@@ -14,16 +14,17 @@ $other = $_POST['other'];
 if($id != null && $pw != null && $pw2 != null && $pw == $pw2)
 {
         
-        $mem = new Member_handle;
-        if($mem->register($id,$pw,$telephone,$address,$other)){
+      $mem = new Member_handle;
+      $result = $mem->register($id,$pw,$telephone,$address,$other);
+      if($result){
 	          echo '新增成功!';
 	          echo '<meta http-equiv=REFRESH CONTENT="2;url=../index.php">';
 
 	    }       
 	    else {
-              echo '新增失敗!';
+              echo $result;
               echo '<meta http-equiv=REFRESH CONTENT="2;url=../index.php">';
-        }  
+      }  
 }
 else
 {

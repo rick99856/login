@@ -15,7 +15,14 @@ $other = $_POST['other'];
 if($_SESSION['username'] != null && $pw != null && $pw2 != null && $pw == $pw2)
 {
         $mem = new Member_handle;
-        $mem->update($id,$pw,$telephone,$address,$other);
+        $result = $mem->update($id,$pw,$telephone,$address,$other);
+        if($result){
+			echo '修改成功!';
+            echo '<meta http-equiv=REFRESH CONTENT="2;url=../view/member.php">';
+        }else{
+        	echo '修改失敗!';
+            echo '<meta http-equiv=REFRESH CONTENT="2;url=../view/member.php">';
+        }
 }
 else
 {
